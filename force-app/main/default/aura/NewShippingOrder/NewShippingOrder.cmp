@@ -1,0 +1,16 @@
+<aura:component implements="lightning:actionOverride,force:lightningQuickAction,force:hasRecordId" >
+
+<lightning:recordEditForm objectApiName="Shipping_Order__c">
+    
+    <lightning:input type="number" name="inputTEU" label="Declare TEU" required="true" />
+    <lightning:inputField fieldName="Shipping_project__c" />
+    <lightning:inputField fieldName="Type_of_goods__c" />
+    <lightning:inputField fieldName="Order_issuer__c" />
+    <lightning:inputField fieldName="Status__c" default="Received"/>
+
+    <lightning:button name="save" type="submit" label="Create Order" onclick="{! c.handleClick }" />
+
+</lightning:recordEditForm>
+
+
+</aura:component>
